@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class IndexController {
 
 
-    @UserLoginToken
+    @PassToken
     @RequestMapping(value = "test",method = RequestMethod.GET,produces = "text/plain;charset=UTF-8")
     public String test(){
         return "test";

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+
 @Service
 public class UserService {
     private List<User> userList = new ArrayList<>();
@@ -43,8 +44,7 @@ public class UserService {
     }
     public User getUserByName(String username){
 
-        for (User user:userList
-        ) {
+        for (User user:userList) {
             if(user.getName().equals(username)){
                 return user;
             }
