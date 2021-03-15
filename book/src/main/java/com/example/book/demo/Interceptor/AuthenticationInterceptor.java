@@ -43,7 +43,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
                 return true;
             }
         }
-        String userId = null;
+        int userId ;
         if(method.isAnnotationPresent(UserLoginToken.class))
         {
             UserLoginToken userLoginToken = method.getAnnotation(UserLoginToken.class);
@@ -53,12 +53,12 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
                 }
                 //获取token的userid
                 try{
-                    userId = JWT.decode(token).getAudience().get(0);
+                    userId =Integer.parseInt(JWT.decode(token).getAudience().get(0)) ;
                 }
                 catch (JWTDecodeException e){
                     throw new RuntimeException("401");
                 }
-                User user = userService.getUser(userId);
+                User user = userService.getUserById(userId);
                 if(user==null){
                     throw new RuntimeException("用户不存在");
                 }

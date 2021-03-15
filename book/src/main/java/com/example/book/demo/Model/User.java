@@ -15,4 +15,19 @@ public class User {
     private String name;
 
     private String password;
+
+    private int type;
+
+    private String tel;
+
+    private String college;
+
+    private String sex;
+
+    private String major;
+
+    private String classNum;
+
+    private String studentId;
+
 }
