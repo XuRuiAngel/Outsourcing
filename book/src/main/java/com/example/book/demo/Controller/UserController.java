@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.Cookie;
@@ -40,7 +41,7 @@ public class UserController {
         if(!userforbase.getPassword().equals(password)){
             JSONObject jsonObject=new JSONObject();
             jsonObject.put("message","登录失败，密码错误");
-            jsonObject.put("status","1");
+            jsonObject.put("status","2");
             return jsonObject;
         }
 
@@ -53,13 +54,14 @@ public class UserController {
 
         JSONObject jsonObject=new JSONObject();
         jsonObject.put("message","登录成功");
-        jsonObject.put("status","2");
+        jsonObject.put("status","1");
         return jsonObject;
 
     }
 
-    @RequestMapping("/registUser")
+    @RequestMapping(value = "/registUser",method = RequestMethod.POST)
     @PassToken
+    @ResponseBody
     public Object registUser(String name,String tel,String college,String sex,String major,String classNum,String studentId,String password){
         User userforbase =  userService.login(tel);
         if(userforbase!=null){
@@ -77,6 +79,7 @@ public class UserController {
 
     @RequestMapping("/registSeller")
     @PassToken
+    @ResponseBody
     public Object registSeller(String name,String tel,String college,String sex,String major,String classNum,String studentId,String password){
         User userforbase =  userService.login(tel);
         if(userforbase!=null){

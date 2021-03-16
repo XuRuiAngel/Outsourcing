@@ -23,4 +23,6 @@ public class Order {
     private int time;
 
     private double price;
+
+    private int bookId;
 }

@@ -32,4 +32,6 @@ public class Book {
     private double depreciationRate;
 
     private String remark;
+
+    private int state;
 }
