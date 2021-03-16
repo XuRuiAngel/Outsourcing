@@ -20,7 +20,7 @@ public class TokenUtil {
         Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
         token = JWT.create().withAudience(user.getId())
                 .withExpiresAt(date)
-                .withClaim("id",user.getName())
+                .withClaim("type",user.getType())
                 .sign(Algorithm.HMAC256(user.getPassword()));
         return token;
     }

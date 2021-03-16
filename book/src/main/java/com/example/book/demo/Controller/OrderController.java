@@ -22,7 +22,7 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
-    @PassToken
+    @UserLoginToken
     @RequestMapping(value = "/addOrder",method = RequestMethod.POST)
     @ResponseBody
     Object addOrder(HttpServletRequest request,double price,int model, int time,int sellerId,int bookId){
@@ -46,14 +46,12 @@ public class OrderController {
         return jsonObject;
     }
 
-    @PassToken
+    @UserLoginToken
     @RequestMapping(value = "/getOrders",method = RequestMethod.GET)
     @ResponseBody
     Object getOrders(HttpServletRequest request){
         String token  =  request.getHeader("token");
         int id=Integer.parseInt(JWT.decode(token).getAudience().get(0)) ;
-
-
         return orderService.getOrdersByUid(id);
     }
 

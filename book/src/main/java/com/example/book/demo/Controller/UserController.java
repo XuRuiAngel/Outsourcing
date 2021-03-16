@@ -45,8 +45,6 @@ public class UserController {
             return jsonObject;
         }
 
-
-
         String token = TokenUtil.getToken(userforbase);
         Cookie cookie=new Cookie("token",token);
         cookie.setMaxAge(30000);

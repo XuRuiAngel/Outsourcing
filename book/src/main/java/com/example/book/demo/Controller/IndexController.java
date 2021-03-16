@@ -17,4 +17,10 @@ public class IndexController {
         return "test";
     }
 
+    @PassToken
+    @RequestMapping(value = "index",method = RequestMethod.GET,produces = "text/plain;charset=UTF-8")
+    public String index(){
+        return "index";
+    }
+
 }

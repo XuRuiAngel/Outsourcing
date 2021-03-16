@@ -21,7 +21,7 @@ public class BookController {
     @Autowired
     BookService bookService;
 
-    @PassToken
+    @UserLoginToken
     @RequestMapping(value = "/addBook",method = RequestMethod.POST)
     @ResponseBody
     public Object addBook(HttpServletRequest request,String name, String author, String type, String price, String content, String publisher, String publishTime, String version, double depreciationRate, String remark){
