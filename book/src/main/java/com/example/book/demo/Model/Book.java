@@ -34,4 +34,6 @@ public class Book {
     private String remark;
 
     private int state;
+
+    private String ISBN;
 }

@@ -1,0 +1,567 @@
+/* 主页index.html的样式表 */
+/* body{
+    height: 1000px;
+} */
+/* 顶部导航条的容器 */
+.topbar-wrapper{
+    /* 设置宽度全屏 */
+    width: 100%;
+    /* 设置高度和行高 */
+    height: 40px;
+    line-height: 40px;
+    /* 设置背景颜色 */
+    background-color: #333;
+}
+/* 设置超链接的颜色 */
+.topbar a{
+    font-size: 12px;
+    color: #b0b0b0;
+    display: block;
+}
+
+/* 设置超链接移入的效果 */
+.topbar a:hover{
+    color: #fff;
+}
+
+/* 设置中间分割线 */
+.topbar .line{
+    font-size: 12px;
+    color: #424242;
+    margin: 0 8px;
+}
+
+/* 设置左侧导航栏 */
+.service, .topbar li{
+    float: left;
+}
+.app{
+    position: relative;
+}
+/* 设置app下的小三角 */
+/* .app-wrapper:hover > .app::after{ */
+.app::after{
+    content: '';
+    display: none;
+    /* 设置绝对定位 */
+    position: absolute;
+    width: 0;
+    height: 0;
+    /* 设置四个方向的边框 */
+    border: 8px solid transparent;
+    /* 去除上边框 */
+    border-top: none;
+    /* 单独设置下边框的颜色 */
+    border-bottom-color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+
+.app:hover .qrcode,
+.app:hover::after{
+    display: block;
+    height: 148px;
+}
+
+/* .app-wrapper:hover>.app .qrcode{
+    display: block;
+
+} */
+/* 设置下载app的下拉 */
+.app .qrcode{
+    /* display: none; */
+    position: absolute;
+    left: -40px;
+    width: 124px;
+    /* height: 148px; */
+    height: 0;
+    overflow: hidden;
+    /* margin-left: -62px; */
+    line-height: 1;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+
+    /* transition: 用于为样式设置过渡效果 */
+    transition: height 0.3s;
+
+    z-index: 9999;
+}
+
+/* 设置二维码图片 */
+.app .qrcode img{
+    width: 90px;
+    margin: 17px;
+    margin-bottom: 10px;
+}
+
+/* 设置二维码中的文字 */
+.app .qrcode span{
+    font-size: 14px;
+    color: #000;
+}
+
+/* 设置右侧导航栏 */
+.shop-cart, .user-info{
+    float: right;
+}
+
+.shop-cart{
+    margin-left: 26px;
+}
+
+/* 设置购物车的样式 */
+.shop-cart a{
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+}
+
+.shop-cart:hover a{
+    background-color: #fff;
+    color: #FF6700;
+}
+
+.shop-cart i{
+    margin-right: 2px;
+}
+
+.header-wrapper{
+    /* background-color: red; */
+    position: relative;
+}
+
+/* 设置中间的header */
+.header{
+    height: 100px;
+    /* background-color: #ff0; */
+}
+
+/* 设置logo的h1 */
+.header .logo{
+    float: left;
+    margin-top: 22px;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    /* 隐藏logo中的文字 */
+    text-indent: -9999px
+}
+
+/* 统一设置logo的超链接 */
+.header .logo a{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 0;
+    background-color: #FF6700;
+    background-image: url(../img/npu.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    transition: left 0.3s;
+}
+
+/* 设置home图片 */
+.header .logo .home{
+    background-image: url(../img/npu-campus.jpg);
+    background-size: 100% 100%;
+    left: -55px;
+}
+
+/* 设置鼠标移入以后两个图标的位置 */
+.header .logo:hover .mi{
+    left: 55px;
+}
+
+.header .logo:hover .home{
+    left: 0;
+}
+
+/* 设置中间的导航条 */
+.header .nav-wrapper{
+    float: left;
+    margin-left: 7px;
+}
+
+/* 设置导航条 */
+.header .nav{
+    /* width: 842px; */
+    height: 100px;
+    line-height: 100px;
+    padding-left: 58px;
+    left: -20px;
+}
+
+/* 设置导航条中的li */
+.nav > li{
+    float: left;
+}
+
+.all-goods-wrapper{
+    position: relative;
+}
+
+/* 设置左侧导航条的样式 */
+.left-nav-wrapper  {
+    width: 234px;
+    height: 460px;
+    position: relative;
+    left: -50px;
+    background-color: rgba(0,0,0,0.6);
+    left: -119px;
+    z-index: 999;
+}
+
+.left-nav-wrapper .left-nav {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 30px;
+}
+
+
+/* 字体颜色，应该正确设置在该元素上，而不是其父类yuan's */
+.left-nav-wrapper .left-nav a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.left-nav-wrapper .left-nav:hover {
+    background-color: rgb(255,103,0);
+}
+
+.left-nav-wrapper .left-nav:first-child {
+    margin-top: 20px;
+}
+
+.left-nav-wrapper .left-nav:last-child {
+    margin-bottom: 20px;
+}
+
+.left-nav-wrapper .left-nav .fas.fa-angle-right {
+    float: right;
+    line-height: 42px;
+}
+/* 隐藏全部商品 */
+.all-goods {
+    visibility: hidden;
+}
+
+.nav-wrapper li a{
+    display: block;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.nav-wrapper li:last-child {
+    margin-right: 0px;
+}
+
+.nav .goods-info{
+    /* height: 228px; */
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    transition: height 0.3s;
+    z-index: 9999;
+}
+
+.nav .goods-info .douban {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav .goods-info .dp-pic {
+    margin-left: 100px;
+}
+
+.nav .goods-info .dp-pic a{
+    display: block;
+    
+}
+
+.nav .goods-info .db-pic img {
+    width: 120px;   
+}
+
+.nav .goods-info .dp-line {
+    font-size: 12px;
+    color: #424242;
+    margin: 0 8px;
+}
+
+.show-goods {
+    position: relative;
+    left: -121px;
+}
+
+
+/* .nav-wrapper .show-goods li {
+    position: relative;
+    left:-105px;
+} */
+.nav-wrapper .not-show-goods {
+    position: relative;
+    left: -130px;
+}
+
+
+
+/* .nav li:not(:first-of-type):not(:nth-child(10)):not(:nth-child(9)):hover ~ .goods-info, */
+.nav .show-goods:hover ~ .goods-info,
+.goods-info:hover {
+    height: 228px;
+    border-top: 1px solid rgb(224, 224, 224);
+    box-shadow: 0 5px 3px rgba(0, 0, 0, .2);
+}
+
+.head-right-wrapper {
+    width: 296px;
+    height: 50px;
+    float: right;
+    margin-top: 25px;
+    border:none;
+    position: absolute;
+    left: 1090px;
+}
+
+.head-right-wrapper .search-info {
+    border: 1px solid #B2B2B2;
+    box-sizing:border-box;
+    padding: 0;
+    float: left;
+    height: 50px;
+    width: 244px;
+    outline: none;
+    padding: 0px 13px;
+    font-size: 16px;
+}
+
+.head-right-wrapper .search-btn {
+    float: left;
+    height: 50px;
+    width: 52px;
+    border: 1px solid #B2B2B2;
+    border-left: none;
+    transition: all 0.1s;
+}
+
+.search-info:focus ,
+.search-info:focus +.search-btn {
+    border-color: rgb(255,103,0);
+}
+
+.head-right-wrapper .search-btn:hover,
+.head-right-wrapper .search-btn:hover .fas.fa-search {
+    background-color: rgb(255,103,0);
+    color: rgb(255,255,255);
+}
+
+.banner-wrapper {
+    width: 992px;
+    height: 460px;
+    position: relative;
+    overflow: hidden;
+    margin: 100px auto;
+}
+
+.banner-wrapper .banner-img {
+    float: left;
+    width: 5952px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+
+.banner-wrapper .banner-img li{
+    width: 992px;
+    height: 460px;
+    float: left;
+}
+
+/* .banner-wrapper .banner-img li{
+    overflow: hidden;
+} */
+
+
+/* .banner-wrapper .banner-img img{
+    position:absolute;
+    width: 1226px;
+    height: 460px; 
+    left: 28.5%;
+} */
+/* 设置pointer */
+.banner-wrapper .pointer {
+    position: absolute;
+    bottom: 10%;
+    left: 85%;
+    z-index: 10;
+}
+
+/* .banner-wrapper .pointer .prev-next .prev {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+} */
+
+.banner-wrapper .pointer a{
+    width: 6px;
+    height: 6px;
+    background-color: rgba(0,0,0,0.4);
+    border:3px solid rgba(255,255,255,0.6);
+    border-radius: 50%;
+    float: left;
+    margin-left: 3px;
+    z-index:100;
+}
+
+.pointer a:hover ,
+.pointer a.active {
+  background-color: #fff;
+  border-color: rgba(0,0,0,0.4);
+}
+
+.prev-next a {
+    width: 41px;
+    height: 69px;
+    background-image: url(../img/icon-slides.png);
+    position: absolute;
+    top:0px;
+    bottom: 0px;
+    margin: auto 0px;
+    z-index: 2000;
+}
+
+.prev-next .prev {
+    left: 3%;
+}
+
+.prev-next .next {
+    left: 93%;
+    background-position: -43px;
+}
+
+.prev-next .prev:hover {
+    background-position: -85px;
+}
+
+.prev-next .next:hover {
+    background-position: -123px;
+}
+
+.back-up {
+    width: 26px;
+    height: 206px;
+    background-color: rgb(255,255,254);
+    position: fixed;
+    right: 50%;
+    margin-right: -649px;
+    bottom: 25px;
+}
+
+.back-up .back-up-icon a{
+    position: block;
+    height: 42px;
+    line-height: 40px;
+    margin-left: 5px;
+}
+
+.back-up .qrcode{
+    position: relative;
+    left: -124px;
+    width: 124px;
+    
+    height: 0;
+    overflow: hidden;
+    /* margin-left: -62px; */
+    line-height: 1;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+
+    /* transition: 用于为样式设置过渡效果 */
+    transition: height 0.3s;
+    position: absolute;
+    z-index: 99999;
+    top:0px;
+}
+
+.back-up .phone-app:hover .qrcode {
+    height: 148px;
+}
+
+.back-up .qrcode img{
+    vertical-align: middle;
+    width: 90px;
+    margin: 17px;
+    margin-bottom: 5px;
+    z-index:2000;
+}
+
+.back-up .qrcode span {
+    display: inline-block;  
+}
+
+.ad {
+    position: relative;
+    margin-top: 14px;
+}
+
+.ad-wrapper {
+    width: 234px;
+    height: 170px;
+    background-color: #5f5f70;
+    float: left;
+    
+    
+}
+
+.ad .imgs {
+    position: absolute;
+    left: 234px;
+    height: 170px;
+    top:0px;
+    float: left;
+    z-index: 99;
+}
+
+.ad .imgs img {
+    display: block;
+    float: left;
+    width: 316px;
+    height: 170px;
+    margin-left:14px;
+    z-index: 99;
+}
+
+.ad .imgs img:first-child {
+    float: left;
+    width: 316px;
+    height: 170px;
+}
+
+.ad-wrapper a {
+    display: block;
+    height: 84px;
+    width: 76px;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    color: #cfccca;
+}
+
+.ad-wrapper a i{
+    display: block;
+    font-size: 23px;
+    margin-top:20px;
+    margin-bottom: 3px;
+}

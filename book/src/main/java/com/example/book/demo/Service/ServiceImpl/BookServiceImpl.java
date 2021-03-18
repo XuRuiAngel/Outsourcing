@@ -18,8 +18,8 @@ public class BookServiceImpl implements BookService {
 
 
     @Override
-    public void addBook(String name, String author, String type, String price, String content, int uid, String publisher, String publishTime, String version, double depreciationRate, String remark) {
-            bookMapper.addBook(name,author,type,  price, content,  uid, publisher, publishTime,  version,  depreciationRate,  remark);
+    public void addBook(String name, String author, String type, String price, String content, int uid, String publisher, String publishTime, String version, double depreciationRate, String remark,String ISBN) {
+            bookMapper.addBook(name,author,type,  price, content,  uid, publisher, publishTime,  version,  depreciationRate,  remark,ISBN);
     }
 
     @Override

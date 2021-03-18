@@ -30,4 +30,6 @@ public class User {
 
     private String studentId;
 
+    private double account;
+
 }

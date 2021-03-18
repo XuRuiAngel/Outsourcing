@@ -24,11 +24,11 @@ public class BookController {
     @UserLoginToken
     @RequestMapping(value = "/addBook",method = RequestMethod.POST)
     @ResponseBody
-    public Object addBook(HttpServletRequest request,String name, String author, String type, String price, String content, String publisher, String publishTime, String version, double depreciationRate, String remark){
+    public Object addBook(HttpServletRequest request,String name, String author, String type, String price, String content, String publisher, String publishTime, String version, double depreciationRate, String remark,String ISBN){
         String token  =  request.getHeader("token");
         int id=Integer.parseInt(JWT.decode(token).getAudience().get(0)) ;
 
-        bookService.addBook(name,author,type,  price, content, id, publisher, publishTime,  version,  depreciationRate,  remark);
+        bookService.addBook(name,author,type,  price, content, id, publisher, publishTime,  version,  depreciationRate,  remark,ISBN);
 
         JSONObject jsonObject=new JSONObject();
         jsonObject.put("message","添加书籍成功");
