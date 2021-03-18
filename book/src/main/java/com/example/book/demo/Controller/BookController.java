@@ -21,6 +21,22 @@ public class BookController {
     @Autowired
     BookService bookService;
 
+    /**
+     * 添加书籍
+     * @param request
+     * @param name
+     * @param author
+     * @param type
+     * @param price
+     * @param content
+     * @param publisher
+     * @param publishTime
+     * @param version
+     * @param depreciationRate
+     * @param remark
+     * @param ISBN
+     * @return
+     */
     @UserLoginToken
     @RequestMapping(value = "/addBook",method = RequestMethod.POST)
     @ResponseBody
@@ -36,6 +52,10 @@ public class BookController {
         return jsonObject;
     }
 
+    /**
+     * 获取所有书籍的列表
+     * @return
+     */
     @UserLoginToken
     @RequestMapping(value = "/getBooks",method = RequestMethod.GET)
     @ResponseBody

@@ -26,6 +26,14 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    /**
+     * 个人用户登录
+     * @param tel
+     * @param password
+     * @param request
+     * @param response
+     * @return
+     */
     @PassToken
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public Object login(String tel,String password,  HttpServletRequest request, HttpServletResponse response){
@@ -57,6 +65,18 @@ public class UserController {
 
     }
 
+    /**
+     * 注册个人用户
+     * @param name
+     * @param tel
+     * @param college
+     * @param sex
+     * @param major
+     * @param classNum
+     * @param studentId
+     * @param password
+     * @return
+     */
     @RequestMapping(value = "/registUser",method = RequestMethod.POST)
     @PassToken
     @ResponseBody
@@ -75,6 +95,18 @@ public class UserController {
         return jsonObject;
     }
 
+    /**
+     * 注册商家
+     * @param name
+     * @param tel
+     * @param college
+     * @param sex
+     * @param major
+     * @param classNum
+     * @param studentId
+     * @param password
+     * @return
+     */
     @RequestMapping("/registSeller")
     @PassToken
     @ResponseBody

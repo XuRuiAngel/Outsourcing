@@ -22,6 +22,17 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
+
+    /**
+     * 新建订单
+     * @param request
+     * @param price
+     * @param model
+     * @param time
+     * @param sellerId
+     * @param bookId
+     * @return
+     */
     @UserLoginToken
     @RequestMapping(value = "/addOrder",method = RequestMethod.POST)
     @ResponseBody
@@ -46,6 +57,11 @@ public class OrderController {
         return jsonObject;
     }
 
+    /**
+     * 获取用户的订单列表(不是所有的，是目前登录用户发起的订单列表)
+     * @param request
+     * @return
+     */
     @UserLoginToken
     @RequestMapping(value = "/getOrders",method = RequestMethod.GET)
     @ResponseBody
