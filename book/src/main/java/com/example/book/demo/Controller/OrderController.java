@@ -25,6 +25,7 @@ public class OrderController {
 
     /**
      * 新建订单
+     *
      * @param request
      * @param price
      * @param model
@@ -34,40 +35,41 @@ public class OrderController {
      * @return
      */
     @UserLoginToken
-    @RequestMapping(value = "/addOrder",method = RequestMethod.POST)
+    @RequestMapping(value = "/addOrder", method = RequestMethod.POST)
     @ResponseBody
-    Object addOrder(HttpServletRequest request,double price,int model, int time,int sellerId,int bookId){
-        String token  =  request.getHeader("token");
-        int id=Integer.parseInt(JWT.decode(token).getAudience().get(0)) ;
+    Object addOrder(HttpServletRequest request, double price, int model, int time, int sellerId, int bookId) {
+        String token = request.getHeader("token");
+        int id = Integer.parseInt(JWT.decode(token).getAudience().get(0));
 
-        String nowTime= new TimeUtil().getFormatDateForSix();
+        String nowTime = new TimeUtil().getFormatDateForSix();
 
-        int flag=orderService.addOrder(id,price,nowTime,0,model,sellerId,time,bookId);
+        int flag = orderService.addOrder(id, price, nowTime, 0, model, sellerId, time, bookId);
 
-        if(flag==0){
-            JSONObject jsonObject=new JSONObject();
-            jsonObject.put("message","抱歉!该书已被下单");
-            jsonObject.put("status","0");
+        if (flag == 0) {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("message", "抱歉!该书已被下单");
+            jsonObject.put("status", "0");
             return jsonObject;
         }
-        JSONObject jsonObject=new JSONObject();
-        jsonObject.put("message","下单成功");
-        jsonObject.put("status","1");
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("message", "下单成功");
+        jsonObject.put("status", "1");
 
         return jsonObject;
     }
 
     /**
      * 获取用户的订单列表(不是所有的，是目前登录用户发起的订单列表)
+     *
      * @param request
      * @return
      */
     @UserLoginToken
-    @RequestMapping(value = "/getOrders",method = RequestMethod.GET)
+    @RequestMapping(value = "/getOrders", method = RequestMethod.GET)
     @ResponseBody
-    Object getOrders(HttpServletRequest request){
-        String token  =  request.getHeader("token");
-        int id=Integer.parseInt(JWT.decode(token).getAudience().get(0)) ;
+    Object getOrders(HttpServletRequest request) {
+        String token = request.getHeader("token");
+        int id = Integer.parseInt(JWT.decode(token).getAudience().get(0));
         return orderService.getOrdersByUid(id);
     }
 

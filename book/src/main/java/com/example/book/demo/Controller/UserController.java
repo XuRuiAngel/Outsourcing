@@ -28,6 +28,7 @@ public class UserController {
 
     /**
      * 个人用户登录
+     *
      * @param tel
      * @param password
      * @param request
@@ -35,38 +36,39 @@ public class UserController {
      * @return
      */
     @PassToken
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public Object login(String tel,String password,  HttpServletRequest request, HttpServletResponse response){
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public Object login(String tel, String password, HttpServletRequest request, HttpServletResponse response) {
 
-        User userforbase =  userService.login(tel);
+        User userforbase = userService.login(tel);
 
-        if(userforbase==null){
-            JSONObject jsonObject=new JSONObject();
-            jsonObject.put("message","登录失败，用户不存在");
-            jsonObject.put("status","0");
+        if (userforbase == null) {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("message", "登录失败，用户不存在");
+            jsonObject.put("status", "0");
             return jsonObject;
         }
-        if(!userforbase.getPassword().equals(password)){
-            JSONObject jsonObject=new JSONObject();
-            jsonObject.put("message","登录失败，密码错误");
-            jsonObject.put("status","2");
+        if (!userforbase.getPassword().equals(password)) {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("message", "登录失败，密码错误");
+            jsonObject.put("status", "2");
             return jsonObject;
         }
 
         String token = TokenUtil.getToken(userforbase);
-        Cookie cookie=new Cookie("token",token);
+        Cookie cookie = new Cookie("token", token);
         cookie.setMaxAge(30000);
         response.addCookie(cookie);
 
-        JSONObject jsonObject=new JSONObject();
-        jsonObject.put("message","登录成功");
-        jsonObject.put("status","1");
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("message", "登录成功");
+        jsonObject.put("status", "1");
         return jsonObject;
 
     }
 
     /**
      * 注册个人用户
+     *
      * @param name
      * @param tel
      * @param college
@@ -77,26 +79,27 @@ public class UserController {
      * @param password
      * @return
      */
-    @RequestMapping(value = "/registUser",method = RequestMethod.POST)
+    @RequestMapping(value = "/registUser", method = RequestMethod.POST)
     @PassToken
     @ResponseBody
-    public Object registUser(String name,String tel,String college,String sex,String major,String classNum,String studentId,String password){
-        User userforbase =  userService.login(tel);
-        if(userforbase!=null){
-            JSONObject jsonObject=new JSONObject();
-            jsonObject.put("message","该电话号码已被注册过");
-            jsonObject.put("status","0");
+    public Object registUser(String name, String tel, String college, String sex, String major, String classNum, String studentId, String password) {
+        User userforbase = userService.login(tel);
+        if (userforbase != null) {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("message", "该电话号码已被注册过");
+            jsonObject.put("status", "0");
             return jsonObject;
         }
-       userService.registerUser(name,tel,college,sex,major,classNum,studentId,password);
-        JSONObject jsonObject=new JSONObject();
-        jsonObject.put("message","注册成功");
-        jsonObject.put("status","1");
+        userService.registerUser(name, tel, college, sex, major, classNum, studentId, password);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("message", "注册成功");
+        jsonObject.put("status", "1");
         return jsonObject;
     }
 
     /**
      * 注册商家
+     *
      * @param name
      * @param tel
      * @param college
@@ -110,30 +113,30 @@ public class UserController {
     @RequestMapping("/registSeller")
     @PassToken
     @ResponseBody
-    public Object registSeller(String name,String tel,String college,String sex,String major,String classNum,String studentId,String password){
-        User userforbase =  userService.login(tel);
-        if(userforbase!=null){
-            JSONObject jsonObject=new JSONObject();
-            jsonObject.put("message","该电话号码已被注册过");
-            jsonObject.put("status","0");
+    public Object registSeller(String name, String tel, String college, String sex, String major, String classNum, String studentId, String password) {
+        User userforbase = userService.login(tel);
+        if (userforbase != null) {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("message", "该电话号码已被注册过");
+            jsonObject.put("status", "0");
             return jsonObject;
         }
-        userService.registerUser(name,tel,college,sex,major,classNum,studentId,password);
-        JSONObject jsonObject=new JSONObject();
-        jsonObject.put("message","注册成功");
-        jsonObject.put("status","1");
+        userService.registerUser(name, tel, college, sex, major, classNum, studentId, password);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("message", "注册成功");
+        jsonObject.put("status", "1");
         return jsonObject;
     }
 
 
     @UserLoginToken
     @RequestMapping("/getmessage")
-    public String getmessage(HttpServletRequest request){
+    public String getmessage(HttpServletRequest request) {
 
-        String token  =  request.getHeader("token");
-        String id=JWT.decode(token).getAudience().get(0);
-        Claim name =JWT.decode(token).getClaim("name");
-        return id+"你已经通过验证"+name.asString();
+        String token = request.getHeader("token");
+        String id = JWT.decode(token).getAudience().get(0);
+        Claim name = JWT.decode(token).getClaim("name");
+        return id + "你已经通过验证" + name.asString();
     }
 
 

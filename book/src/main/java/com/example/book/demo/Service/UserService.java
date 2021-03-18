@@ -17,7 +17,7 @@ public interface UserService {
 
     User getUserById(int id);
 
-    void registerUser(String name,String tel,String college,String sex,String major,String classNum,String studentId,String password);
+    void registerUser(String name, String tel, String college, String sex, String major, String classNum, String studentId, String password);
 
-    void registerSeller(String name,String tel,String password);
+    void registerSeller(String name, String tel, String password);
 }

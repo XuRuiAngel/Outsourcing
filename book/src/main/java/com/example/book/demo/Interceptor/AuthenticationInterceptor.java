@@ -29,44 +29,42 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //进入方法之前进行的操作
         //获取token
-        String token  =  request.getHeader("token");
+        String token = request.getHeader("token");
         //如果不是映射到方法直接通过
-        if(!(handler instanceof HandlerMethod)){
+        if (!(handler instanceof HandlerMethod)) {
             return true;
         }
         HandlerMethod handlerMethod = (HandlerMethod) handler;
         Method method = handlerMethod.getMethod();
-        if(method.isAnnotationPresent(PassToken.class))
-        {
+        if (method.isAnnotationPresent(PassToken.class)) {
             PassToken passToken = method.getAnnotation(PassToken.class);
-            if(passToken.required()){
+            if (passToken.required()) {
                 return true;
             }
         }
-        int userId ;
-        if(method.isAnnotationPresent(UserLoginToken.class))
-        {
+        int userId;
+        if (method.isAnnotationPresent(UserLoginToken.class)) {
             UserLoginToken userLoginToken = method.getAnnotation(UserLoginToken.class);
-            if(userLoginToken.required()){
-                if(token == null){
+            if (userLoginToken.required()) {
+                if (token == null) {
+                    response.sendRedirect("/index");
                     throw new RuntimeException("无token，请重新登录");
                 }
                 //获取token的userid
-                try{
-                    userId =Integer.parseInt(JWT.decode(token).getAudience().get(0)) ;
-                }
-                catch (JWTDecodeException e){
+                try {
+                    userId = Integer.parseInt(JWT.decode(token).getAudience().get(0));
+                } catch (JWTDecodeException e) {
                     throw new RuntimeException("401");
                 }
                 User user = userService.getUserById(userId);
-                if(user==null){
+                if (user == null) {
                     throw new RuntimeException("用户不存在");
                 }
                 //验证token
                 JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256(user.getPassword())).build();
-                try{
+                try {
                     jwtVerifier.verify(token);
-                }catch (JWTVerificationException e){
+                } catch (JWTVerificationException e) {
                     throw new RuntimeException("401");
                 }
 

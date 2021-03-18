@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public interface OrderService {
 
-    int addOrder(int uid,double price,String orderTime,int status,int model,int sellerId,int time,int bookId);
+    int addOrder(int uid, double price, String orderTime, int status, int model, int sellerId, int time, int bookId);
 
     Object getOrdersByUid(int uid);
 }
