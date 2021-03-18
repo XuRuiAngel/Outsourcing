@@ -1,5 +1,5 @@
 'use strict';
-Object.defineProperty(exports, '__esModule', {value: true});
+Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'fas';
 var iconName = 'circle';
 var width = 512;
@@ -9,16 +9,15 @@ var unicode = 'f111';
 var svgPathData = 'M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z';
 
 exports.definition = {
-    prefix: prefix,
-    iconName: iconName,
-    icon: [
-        width,
-        height,
-        ligatures,
-        unicode,
-        svgPathData
-    ]
-};
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    ligatures,
+    unicode,
+    svgPathData
+  ]};
 
 exports.faCircle = exports.definition;
 exports.prefix = prefix;

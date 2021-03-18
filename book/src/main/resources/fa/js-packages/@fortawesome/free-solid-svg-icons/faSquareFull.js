@@ -1,5 +1,5 @@
 'use strict';
-Object.defineProperty(exports, '__esModule', {value: true});
+Object.defineProperty(exports, '__esModule', { value: true });
 var prefix = 'fas';
 var iconName = 'square-full';
 var width = 512;
@@ -9,16 +9,15 @@ var unicode = 'f45c';
 var svgPathData = 'M512 512H0V0h512v512z';
 
 exports.definition = {
-    prefix: prefix,
-    iconName: iconName,
-    icon: [
-        width,
-        height,
-        ligatures,
-        unicode,
-        svgPathData
-    ]
-};
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    ligatures,
+    unicode,
+    svgPathData
+  ]};
 
 exports.faSquareFull = exports.definition;
 exports.prefix = prefix;

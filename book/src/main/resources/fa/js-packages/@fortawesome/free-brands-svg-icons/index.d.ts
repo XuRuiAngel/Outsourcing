@@ -456,8 +456,7 @@ export const faYoast: IconDefinition;
 export const faYoutube: IconDefinition;
 export const faYoutubeSquare: IconDefinition;
 export const faZhihu: IconDefinition;
-import {IconDefinition, IconLookup, IconName, IconPrefix, IconPack} from '@fortawesome/fontawesome-common-types';
-
-export {IconDefinition, IconLookup, IconName, IconPrefix, IconPack} from '@fortawesome/fontawesome-common-types';
+import { IconDefinition, IconLookup, IconName, IconPrefix, IconPack } from '@fortawesome/fontawesome-common-types';
+export { IconDefinition, IconLookup, IconName, IconPrefix, IconPack } from '@fortawesome/fontawesome-common-types';
 export const prefix: IconPrefix;
 export const fab: IconPack;
