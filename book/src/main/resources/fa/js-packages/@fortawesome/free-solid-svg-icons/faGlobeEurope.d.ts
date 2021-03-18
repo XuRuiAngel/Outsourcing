@@ -1,4 +1,5 @@
-import { IconDefinition, IconPrefix, IconName } from "@fortawesome/fontawesome-common-types";
+import {IconDefinition, IconPrefix, IconName} from "@fortawesome/fontawesome-common-types";
+
 export const definition: IconDefinition;
 export const faGlobeEurope: IconDefinition;
 export const prefix: IconPrefix;

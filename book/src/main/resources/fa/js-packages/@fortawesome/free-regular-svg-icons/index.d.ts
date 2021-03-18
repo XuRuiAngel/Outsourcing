@@ -150,7 +150,8 @@ export const faWindowClose: IconDefinition;
 export const faWindowMaximize: IconDefinition;
 export const faWindowMinimize: IconDefinition;
 export const faWindowRestore: IconDefinition;
-import { IconDefinition, IconLookup, IconName, IconPrefix, IconPack } from '@fortawesome/fontawesome-common-types';
-export { IconDefinition, IconLookup, IconName, IconPrefix, IconPack } from '@fortawesome/fontawesome-common-types';
+import {IconDefinition, IconLookup, IconName, IconPrefix, IconPack} from '@fortawesome/fontawesome-common-types';
+
+export {IconDefinition, IconLookup, IconName, IconPrefix, IconPack} from '@fortawesome/fontawesome-common-types';
 export const prefix: IconPrefix;
 export const far: IconPack;
