@@ -85,7 +85,6 @@ public class JwtFilter extends ZuulFilter {
         try {
             //解析没有异常则表示token验证通过，如有必要可根据自身需求增加验证逻辑
             claims = jwtUtil.parseJWT(token);
-
             //对请求进行路由
             ctx.setSendZuulResponse(true);
             //请求头加入userId，传给业务服务

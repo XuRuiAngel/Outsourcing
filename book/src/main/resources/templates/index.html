@@ -1,11 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        西工大图书共享租赁平台
+    </title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../fa/css/all.css">
+
+    <link rel="favicon" href="../favicon.ico">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../js/index.js"></script>
+    <script src="../layui/layui.js" charset="utf-8"></script>
+    
 </head>
 <body>
-index
+    <!-- 顶部导航条 -->
+    <!-- 顶部导航条外部容器 -->
+    <div class="topbar-wrapper">
+        <!-- 创建内部容器 -->
+        <div class="topbar w clearfix">
+            <!-- 左侧的导航 -->
+            <ul class="service">
+                <li><a href="javascript:;">我的共享租赁</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">我的订单</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">个人中心</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">卖家中心</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">法律信息</a></li>
+                <li class="line">|</li>
+                <li class="app-wrapper">
+                    <a class="app" href="javascript:;">
+                        下载app
+                        <!-- 添加一个弹出层 -->
+                        <div class="qrcode">
+                            <img src="../img/download.png">
+                            <span>小米商城app</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
 
+            <!-- 购物车 -->
+            <ul class="shop-cart">
+                <li><a href="javascript:;">
+                        <i class="fas fa-shopping-cart"></i>
+                        购物车（0）
+                    </a></li>
+            </ul>
+
+            <!-- 用户登录注册 -->
+            <ul class="user-info">
+                <li><a href="javascript:;">登录/注册</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">商品分类</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">消息通知</a></li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <!-- 创建一个头部的外部容器 -->
+    <div class="header-wrapper">
+        <div class="header w clearfix">
+            <!-- 创建一个logo -->
+            <h1 class="logo" title="小米">
+                小米官网
+                <a class="home" href="/"></a>
+                <a class="mi" href="/"></a>
+            </h1>
+
+            <!-- 创建一个中间导航条的容器 -->
+            <div class="nav-wrapper">
+                <!-- 创建导航条  -->
+                <ul class="nav clearfix">
+                    <li class="all-goods-wrapper">
+                        <a class="all-goods" href="javascript:;">全部商品分类</a>
+
+                        <ul class="left-nav-wrapper clearfix">
+                            <li class="left-nav">
+                                <a href="javascript:;">日本文学 散文
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li class="left-nav">
+                                <a href="javascript:;">小说 随笔
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li class="left-nav">
+                                <a href="javascript:;">诗歌 童话
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li class="left-nav">
+                                <a href="javascript:;">历史 哲学
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li class="left-nav">
+                                <a href="javascript:;">设计 建筑
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li class="left-nav">
+                                <a href="javascript:;">经济学 理财
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li class="left-nav">
+                                <a href="javascript:;">音乐 回忆录
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li class="left-nav">
+                                <a href="javascript:;">旅行 健康
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li class="left-nav">
+                                <a href="javascript:;">青春 言情
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                            <li class="left-nav">
+                                <a href="javascript:;">武侠 绘本
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="show-goods"><a href="javascript:;">豆瓣书单</a></li>
+                    <li class="show-goods"><a href="javascript:;">新书速递</a></li>
+                    <li class="show-goods"><a href="javascript:;">快递信息</a></li>
+                    <li class="show-goods"><a href="javascript:;">以租代售</a></li>
+                    <li class="show-goods"><a href="javascript:;">共享租赁</a></li>
+
+                    <!-- 创建一个弹出层 -->
+                    <div class="goods-info">
+                        <ul class="douban">
+                            <li class="db-pic">
+                                <a href="javascript:;">
+                                    <img src="../img/douban1.jpg" alt="把自己作为方法">
+                                </a>
+                            </li>
+                            <li class="dp-line"></li>
+                            <li class="douban">
+                                <a href="javascript:;">
+                                    <img src="../img/db2.jpg" alt="夜晚的潜水艇">
+                                </a>
+                            </li>
+                            <li class="dp-line"></li>
+                            <li class="db-pic">
+                                <a href="javascript:;">
+                                    <img src="../img/db3.jpg" alt="回归故里">
+                                </a>
+                            </li>
+                            <li class="dp-line"></li>
+                            <li class="db-pic">
+                                <a href="javascript:;">
+                                    <img src="../img/db4.jpg" alt="烧纸">
+                                </a>
+                            </li>
+                            <li class="dp-line"></li>
+                            <li class="db-pic">
+                                <a href="javascript:;">
+                                    <img src="../img/db5.jpg" alt="走出唯一的真理观">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+
+            </div>
+
+            <div class="head-right-wrapper">
+                <form action="#" class="search">
+                    <input type="text" class="search-info" value="书籍名称、作者、ISBN" onmouseover=this.focus();this.select();   
+
+                    onclick="if(value==defaultValue){value='';this.style.color='#000'}"   
+              
+                    onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999" >
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+
+    </div>
+
+
+    <div class="layui-carousel banner-wrapper" id="test10">
+        <div carousel-item="">
+          <div><img src="../img/wrapper-banner1.jpg"></div>
+          <div><img src="../img/wrapper-banner2.jpg"></div>
+          <div><img src="../img/wrapper-banner3.jpg"></div>
+          <div><img src="../img/wrapper-banner4.jpg"></div>
+          <div><img src="../img/wrapper-banner5.jpg"></div>
+        </div>
+      </div>
+
+       
+      
+       
+                
+      
+     
+     
+    
+
+    <div class="back-up">
+        <ul class="back-up-icon">
+            <li class="phone-app">
+                <a href="javascript:;">
+                    <i class="fas fa-phone"></i>
+                    <div class="qrcode">
+                        <img src="../img/download.png">
+                        <span>扫码领取新</span>
+                        <span>人百元礼包</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" title="个人中心">
+                    <i class="fas fa-user"></i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" title="售后服务">
+                    <i class="fas fa-bell"></i>
+                </a>
+                
+            </li>
+            <li>
+                <a href="javascript:;" title="人工服务">
+                    <i class="fas fa-store"></i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" title="购物车">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                
+            </li>
+        </ul>
+    </div>
+
+   <div class="ad w">
+        <div class="ad-wrapper">
+            <a href="javascript:;">
+                <i class="fas fa-heading"></i>
+                图书秒杀
+            </a>
+            <a href="javascript:;">
+                <i class="fas fa-glasses"></i>
+                企业团购
+            </a>
+            <a href="javascript:;">
+                <i class="fas fa-tools"></i>
+                必购通道
+            </a>
+            <a href="javascript:;">
+                <i class="fas fa-apple-alt"></i>
+                书粉卡
+            </a>
+            <a href="javascript:;">
+                <i class="fas fa-fire-alt"></i>
+                以旧换新
+            </a>
+            <a href="javascript:;">
+                <i class="fas fa-landmark"></i>
+                话费充值
+            </a>
+        </div>
+        <div class="imgs">
+            <a href="javascript:;">
+                <img src="../img/douban/db-pic1.jpg" alt="pic1">
+            </a>
+            <a href="javascript:;">
+                <img src="../img/douban/db-pic2.jpg" alt="pic2">
+            </a>
+            <a href="javascript:;">
+                <img src="../img/douban/db-pic3.jpg" alt="pic3">
+            </a>
+        </div>
+   </div>
+
+   <script>
+    layui.use(['carousel', 'form'], function(){
+      var carousel = layui.carousel
+      ,form = layui.form;
+      
+      //常规轮播
+      carousel.render({
+        elem: '#test1'
+        ,arrow: 'always'
+      });
+      
+      //改变下时间间隔、动画类型、高度
+      carousel.render({
+        elem: '#test2'
+        ,interval: 1800
+        ,anim: 'fade'
+        ,height: '120px'
+      });
+      
+      //设定各种参数
+      var ins3 = carousel.render({
+        elem: '#test3'
+      });
+      //图片轮播
+      carousel.render({
+        elem: '#test10'
+        ,width: '992px'
+        ,height: '460px'
+        ,interval: 3000
+      });
+      
+      //事件
+      carousel.on('change(test4)', function(res){
+        console.log(res)
+      });
+      
+      var $ = layui.$, active = {
+        set: function(othis){
+          var THIS = 'layui-bg-normal'
+          ,key = othis.data('key')
+          ,options = {};
+          
+          othis.css('background-color', '#5FB878').siblings().removeAttr('style'); 
+          options[key] = othis.data('value');
+          ins3.reload(options);
+        }
+      };
+      
+      //监听开关
+      form.on('switch(autoplay)', function(){
+        ins3.reload({
+          autoplay: this.checked
+        });
+      });
+      
+      $('.demoSet').on('keyup', function(){
+        var value = this.value
+        ,options = {};
+        if(!/^\d+$/.test(value)) return;
+        
+        options[this.name] = value;
+        ins3.reload(options);
+      });
+      
+      //其它示例
+      $('.demoTest .layui-btn').on('click', function(){
+        var othis = $(this), type = othis.data('type');
+        active[type] ? active[type].call(this, othis) : '';
+      });
+    });
+    </script>
 </body>
 </html>

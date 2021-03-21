@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        图书搜索：把自己作为方法
+    </title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../fa/css/all.css">
+    <link rel="stylesheet" href="../css/book.css">
+    <link rel="favicon" href="../favicon.ico">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../js/index.js"></script>
+    <script src="../layui/layui.js" charset="utf-8"></script>
+    
+</head>
+<body>
+    <!-- 顶部导航条 -->
+    <!-- 顶部导航条外部容器 -->
+    <div class="topbar-wrapper">
+        <!-- 创建内部容器 -->
+        <div class="topbar w clearfix">
+            <!-- 左侧的导航 -->
+            <ul class="service">
+                <li><a href="javascript:;">我的共享租赁</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">我的订单</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">个人中心</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">卖家中心</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">法律信息</a></li>
+                <li class="line">|</li>
+                <li class="app-wrapper">
+                    <a class="app" href="javascript:;">
+                        下载app
+                        <!-- 添加一个弹出层 -->
+                        <div class="qrcode">
+                            <img src="../img/download.png">
+                            <span>小米商城app</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- 购物车 -->
+            <ul class="shop-cart">
+                <li><a href="javascript:;">
+                        <i class="fas fa-shopping-cart"></i>
+                        购物车（0）
+                    </a></li>
+            </ul>
+
+            <!-- 用户登录注册 -->
+            <ul class="user-info">
+                <li><a href="../templates/passport.html">登录/注册</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">商品分类</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">消息通知</a></li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <!-- 创建一个头部的外部容器 -->
+    <div class="header-wrapper">
+        <div class="header w clearfix">
+            <!-- 创建一个logo -->
+            <h1 class="logo" title="西工大图书共享租赁平台">
+                西工大图书共享租赁平台
+                <a class="home" href="/"></a>
+                <a class="mi" href="/"></a>
+            </h1>
+
+            
+
+            <div class="head-right-wrapper">
+                <form action="#" class="search">
+                    <input type="text" class="search-info" value="书籍名称、作者、ISBN" onmouseover=this.focus();this.select();   
+
+                    onclick="if(value==defaultValue){value='';this.style.color='#000'}"   
+              
+                    onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999" >
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="shop-top-text">
+        <img src="../img/book/header.jpg" alt="">
+    </div>
+
+    <div class="nav-top-box">
+
+    </div>
+
+    <div class="main-top">
+        <div class="major-function-box">
+            <div class="lg">
+                <img src="../img/book/book1.jpg" alt="">
+            </div>
+            <div class="major-info">
+                <h1>把自己作为方法</h1>
+            
+                <div class="keyword-define">
+                    <ul>
+                        <li>
+                            <span>作者：项飙</span>
+                        </li>
+                        
+                        <li>
+                            <span>出版时间：2020-07</span>
+                        </li>
+                        <li>
+                            装帧：其他
+                        </li>
+                        <li>
+                            <span>出版社：上海文艺出版社</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="price-group1">
+                    <ul>
+                        <li>
+                            <span>
+                                
+                                价格：<i class="fas fa-yen-sign"></i>40
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                品相：9成新
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="buy-group">
+                    <a class="go-buy" href="javascript:;">立即租借</a>
+                    <a class="add-cart" href="javascript:;">
+                        <i class="fas fa-shopping-cart"></i>    
+                        加入购物车
+                    </a>
+                </div>
+            </div>
+            <div class="brand-logo">
+                <a href="javascript:;">
+                    <img src="../img/book/dianpu-logo.png" alt="上海文艺出版社">
+                </a>
+            </div>
+        </div>
+        
+        <ul class="page-tab-container">
+            <li>商品详情</li>
+        </ul>
+        <a class="book-info" href="javascript:;">
+            <img src="../img/book/book1-content.jpg" alt="">
+        </a>
+    </div>
+    
+</body>
+</html>

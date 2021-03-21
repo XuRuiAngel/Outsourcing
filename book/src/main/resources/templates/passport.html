@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎登录</title>
+
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/passport.css">
+    <link rel="stylesheet" href="../static/fa/css/all.css">
+
+    <link rel="favicon" href="../favicon.ico">
+    <link rel="stylesheet" href="../static/layui/css/layui.css">
+    <link rel="stylesheet" href="../static/fa/css/all.css">
+    <script src="../static/js/index.js"></script>
+    <script src="../static/layui/layui.js" charset="utf-8"></script>
+</head>
+<body>
+    <div class="head-wrapper clearfix">
+        <div class="logo">
+            <a href="javascript:;">
+                <img src="../static/img/logo/npu-logo.jpg" alt="npu">
+            </a>
+            <b class="welcome">欢迎登录</b>
+        </div>
+    </div>
+
+    <div class="register-wrapper">
+        <img src="../static/img/logo/library.jpg" alt="library">
+        <div class="register">
+            <div class="login-tab">
+                <a href="javascript:;">账户登录</a>
+            </div>
+            <div class="space-line"></div>
+            <div class="regist-link">
+                <a href="javascript:;">注册账户</a>
+            </div>
+
+            <div class="loginame">
+                <div class="user">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="item">
+                    <input class="loginname-text" type="text" value="用户名" onmouseover=this.focus();this.select();   
+
+                    onclick="if(value==defaultValue){value='';this.style.color='#000'}"   
+              
+                    onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999">
+                </div>
+
+                <div class="user">
+                    <i class="fas fa-calendar"></i>
+                </div>
+                <div class="item">
+                    <input class="loginname-text" type="password" >
+                </div>
+                
+                <div class="safe">
+                    <a href="javascript:;">忘记密码</a>
+                </div>
+            </div>
+            <div class="login-btn">
+                <a href="javascript:;">登录</a>
+            </div>
+        </div>
+
+        
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.clearfix::before, .clearfix::after {
+    content: '';  /*开启BFC*/
+    display: table;  /*  */
+    clear: both;
+    }
+
+.head-wrapper {
+    height: 221px;
+    width: 100%;  
+    background-color: #FFFFFF;
+    border: 1px solid #DADCE0;
+    box-shadow: 0 1px 5px rgba(74, 74, 126, 0.78);
+}
+
+/* .head-wrapper .welcome {
+    font-size: 20px;
+    font-weight: bold;
+} */
+
+.head-wrapper .logo {
+    width: 300px;
+    height: 60px;
+    margin-top: 50px;
+    margin-left: 25%;
+    
+}
+
+.head-wrapper .logo .welcome {
+    font: 28px Arial,Verdana,"\5b8b\4f53";
+    color: #666;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.register-wrapper {
+    width: 100%;
+    height: 475px;
+    /* overflow: hidden; */
+    background-color: #b0c4de;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.register-wrapper img {
+    width: 50%;
+    height: 100%;
+    display: block;
+    margin-left: 10%;
+}
+
+.register-wrapper .register {
+    width: 350px;
+    height: 400px;
+    background-color: #FFFFFF;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;   
+}
+
+.register-wrapper .register .login-tab {
+    width: 174px;
+    height: 55px;
+    background-color: #FFFFFF;
+}
+.register-wrapper .register .regist-link {
+    width: 174px;
+    height: 55px;
+    background-color:#FFFFFF;
+
+}
+
+.register-wrapper .register .space-line {
+    width: 2px;
+    height: 39px;
+    background-color: black;
+    left: 0;
+    right: 0;
+    margin-top: 8px;
+}
+
+.register-wrapper .register .login-tab a,
+.register-wrapper .register .regist-link a {
+    font-family: "microsoft yahei";
+    font-size: 18px;
+    font-weight: 700;
+    color: #e4393c;
+    display: inline-block;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.register-wrapper .register .login-tab a {
+    color: #666;
+}
+
+.register-wrapper .register .regist-link a {
+    top: 0;
+}
+
+.register-wrapper .register .loginame {
+    position: absolute;
+    width: 348px;
+    height: 257px;
+    margin-top: 55px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid #F4F4F4;
+
+}
+
+.register-wrapper .register .loginame .item {
+    margin-top: 40px;
+    height: 38px;
+    width: 304px;
+    background-color: #FFFFFF;
+    border: 1px solid #BDBDBD;
+}
+
+.register-wrapper .register .loginame .loginname-text {
+    display: inline-block;
+    width: 291px;
+    height: 36px;
+    padding-left: 10px;
+}
+
+
+.loginame .user {
+    width: 39px;
+    height: 38px;
+    background-color: #F4F4F4;
+    margin-top: 40px;
+    border: 1px solid #BDBDBD;
+}
+
+.loginame .user i {
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+.loginame .safe {
+    width: 348px;
+    height: 18px;
+    margin-left: 80%;
+    font-size: 14px;
+}
+
+.login-btn {
+    width: 304px;
+    height: 33px;
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 23px;
+    background-color: #E4393C;
+}
+
+.login-btn a {
+    display: block;
+    width: 304px;
+    height: 33px;
+    margin-left: 140px;
+    margin-top: 3px;
+    font-size: 20px;
+    color: #FFFFFF;
+}

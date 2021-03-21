@@ -1,0 +1,168 @@
+.shop-top-text {
+    width: 1448px;
+    height: 110px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.shop-top-text img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-top-box {
+    width: 100%;
+    height: 32px;
+    background-color: #66756B;
+}
+
+.main-top {
+    width: 1200px;
+    height: 449.63px;
+    background-color: #FFFFFF;
+    left: 0;
+    right: 0;
+    margin: 20px auto;
+}
+
+.main-top .major-function-box {
+    width: 1000px;
+    height: 321px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-top .major-function-box .lg {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #E5E5E5;
+}
+
+.main-top .major-function-box .major-info h1 {
+    font-family: Helvetica,Arial,Microsoft YaHei,sans-serif;
+    font-weight: bolder;
+    font-size: 17px;
+    color: #333333;
+    margin-left: 40px;
+}
+
+
+
+.main-top .major-function-box .lg img {
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.main-top .major-function-box .major-info .keyword-define {
+    width: 618px;
+    height: 96px;
+    background-color: white     ;
+    margin-left: 40px;
+    border: 1px solid #E5E5E5;
+    
+}
+
+.main-top .major-function-box .major-info .keyword-define ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main-top .major-function-box .major-info .keyword-define ul li {
+    width: 179.5px;
+    height: 22px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.main-top .major-function-box .major-info .price-group1 {
+    width: 620px;
+    height: 72px;
+    background-color: #F3F0E9;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.main-top .major-function-box .major-info .price-group1 li {
+    width: 620px;
+    height: 29px;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.main-top .major-function-box .major-info .buy-group {
+    width: 620px;
+    height: 40px;
+    margin-left: 40px;
+    margin-top: 55px;
+    background-color: #FFFFFF;
+}
+
+.main-top .major-function-box .major-info .buy-group .go-buy {
+    display:inline-block;
+    width: 102px;
+    height: 40px;
+    border: 1px solid #8C222C;
+    background-color: #F8F7F3;
+    color: #8C222C;
+    padding-left: 50px;
+    line-height: 40px;
+}
+
+.main-top .major-function-box .major-info .buy-group .go-buy:hover {
+    background-color: white;
+}
+
+.main-top .major-function-box .major-info .buy-group .add-cart {
+    display:inline-block;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    background-color: #8C222C;
+    line-height: 40px;
+    color: #FFFFFF;
+    margin-left: 20px;
+}
+
+.main-top .major-function-box .major-info .buy-group .add-cart:hover {
+    background-color: #800000;
+}
+
+.brand-logo {
+    width: 210px;
+    height: 51.99px;
+    margin-left: 169px;
+    background-color: orange;
+
+}
+
+.brand-logo img {
+    margin-top: 10px;
+}
+
+.page-tab-container {
+    margin-top: 84px;
+    width: 818px;
+    height: 43px;
+    border: 1px solid #E5E5E5;
+}
+
+.page-tab-container li {
+    width: 180px;
+    height: 45px;
+    border-top: 1px solid #86998D;
+    border-right: 1px solid #E5E5E5;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+}
+
+.book-info {
+    display: block;
+    margin-left: 34.5px;
+}
