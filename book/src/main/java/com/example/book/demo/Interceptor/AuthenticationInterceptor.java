@@ -48,7 +48,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
             if (userLoginToken.required()) {
                 if (token == null) {
                     response.sendRedirect("/index");
-                    throw new RuntimeException("无token，请重新登录");
+                    throw new RuntimeException("token失效，请重新登录");
                 }
                 //获取token的userid
                 try {
