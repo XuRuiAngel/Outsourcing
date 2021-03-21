@@ -51,8 +51,9 @@ public class UserController {
         jsonObject.put("code", "1");
 
         JSONObject data=new JSONObject();
-        jsonObject.put("id",userforbase.getId());
-        jsonObject.put("type",userforbase.getType());
+        data.put("id",userforbase.getId());
+        data.put("type",userforbase.getType());
+
 
         jsonObject.put("data",data);
         return jsonObject;

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @FeignClient(name="user",fallback = Fallback.class)
 public interface UserFeignClient {
-
     @RequestMapping(value = "/getUser",method = RequestMethod.GET)
     @ResponseBody
     public String getUser(@RequestParam("id") int id);

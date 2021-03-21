@@ -48,12 +48,14 @@ public class JwtUtil {
      * @return
      */
     public Claims parseJWT(String token) {
+
         //得到DefaultJwtParser
         Claims claims = Jwts.parser()
                 //设置签名的秘钥
                 .setSigningKey(SIGNING_KEY)
                 //设置需要解析的token
                 .parseClaimsJws(token).getBody();
+
         return claims;
     }
 }

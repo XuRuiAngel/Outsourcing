@@ -82,7 +82,7 @@ public class LoginAddJwtPostFilter extends ZuulFilter {
             if (result.getCode() == 1) {
                 HashMap<String, Object> jwtClaims = new HashMap<String, Object>() {{
                     put("id", result.getData().get("id"));
-                    put("type",result.getData().get("type"));
+                    put("type", result.getData().get("type"));
                 }};
                 Date expDate = DateTime.now().plusHours(1).toDate(); //过期时间 7 天
 

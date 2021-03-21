@@ -64,6 +64,8 @@ public class JwtFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         for (String pathPattern : dataFilterConfig.getAuthPath()) {
             if (PathUtil.isPathMatch(pathPattern, ctx.getRequest().getRequestURI())) {
+
+
                 return true;
             }
         }
@@ -81,20 +83,24 @@ public class JwtFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         String token = request.getHeader("token");
+        System.out.println(token);
         Claims claims;
         try {
             //解析没有异常则表示token验证通过，如有必要可根据自身需求增加验证逻辑
             claims = jwtUtil.parseJWT(token);
+
+
             //对请求进行路由
             ctx.setSendZuulResponse(true);
             //请求头加入userId，传给业务服务
             ctx.addZuulRequestHeader("id", claims.get("id").toString());
         } catch (ExpiredJwtException expiredJwtEx) {
-
             //不对请求进行路由
             ctx.setSendZuulResponse(false);
             responseError(ctx, 402, "token expired");
+
         } catch (Exception ex) {
+            System.out.println(ex.getMessage());
             //不对请求进行路由
             ctx.setSendZuulResponse(false);
             responseError(ctx, 401, "invalid token");
