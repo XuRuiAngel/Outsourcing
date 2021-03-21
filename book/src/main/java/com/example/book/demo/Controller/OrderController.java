@@ -34,7 +34,7 @@ public class OrderController {
      * @param bookId
      * @return
      */
-    @UserLoginToken
+
     @RequestMapping(value = "/addOrder", method = RequestMethod.POST)
     @ResponseBody
     Object addOrder(HttpServletRequest request, double price, int model, int time, int sellerId, int bookId) {
@@ -64,7 +64,7 @@ public class OrderController {
      * @param request
      * @return
      */
-    @UserLoginToken
+
     @RequestMapping(value = "/getOrders", method = RequestMethod.GET)
     @ResponseBody
     Object getOrders(HttpServletRequest request) {

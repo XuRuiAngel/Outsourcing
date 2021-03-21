@@ -94,11 +94,11 @@ public class JwtFilter extends ZuulFilter {
 
             //不对请求进行路由
             ctx.setSendZuulResponse(false);
-            responseError(ctx, 402, "token expired");
+            responseError(ctx, -402, "token expired");
         } catch (Exception ex) {
             //不对请求进行路由
             ctx.setSendZuulResponse(false);
-            responseError(ctx, 401, "invalid token");
+            responseError(ctx, -401, "invalid token");
         }
 
         return null;

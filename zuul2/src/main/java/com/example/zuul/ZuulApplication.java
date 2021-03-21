@@ -8,15 +8,15 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
-import org.springframework.cloud.netflix.zuul.EnableZuulServer;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@EnableZuulProxy
 @EnableDiscoveryClient
 @EnableHystrixDashboard
 @EnableHystrix
+@EnableZuulProxy
 public class ZuulApplication {
 
     public static void main(String[] args) {
